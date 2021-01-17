@@ -22,8 +22,8 @@ function FilterSection() {
             <img src="images\icon-settings.svg" alt="5 stars" />
             <h6>Filters</h6>
         </Location>
-        {click? <Filters></Filters> : null}
       </FilterMobile>
+      {click? <Filters></Filters> : null}
     </Wrapper>
   );
 }

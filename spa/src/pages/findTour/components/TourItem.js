@@ -30,7 +30,7 @@ function TourItem({ src, name, numberOfReviews, numberOfStars, date, price }) {
         </Location>
         <Price>
               <img src="images\icon-wallet.svg" alt="location " />
-              <h3 style={{fontWeight: 500}} >From {price}â‚¬</h3>
+              <h3 style={{fontWeight: 500}} >From {price}€</h3>
         </Price>
         </DescriptionBottom>
       </TourDescription>

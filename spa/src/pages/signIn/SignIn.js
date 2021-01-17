@@ -54,7 +54,9 @@ function SignIn() {
                 </SignInText>
                 <Content>
                     <SignInInputs>
+                        <Link to="/">
                         <GoogleButton><img src="\images\icon-google.svg" alt="google icon"></img> Sign In with Google</GoogleButton>
+                        </Link>
                         <hr data-content="OR"></hr>
                         <label>Email adress</label>
                         <StyledInput value={user.username} type="email" onChange={handleChange} name="username"></StyledInput>

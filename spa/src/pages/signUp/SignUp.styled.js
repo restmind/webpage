@@ -162,7 +162,9 @@ label {
   }
   flex-direction: column;
   justify-content: flex-start;
+}
 `;
+
 export const ContentImg = styled.div`
 padding-top: 15vh;
   img{

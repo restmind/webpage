@@ -22,7 +22,7 @@ export const allTours = [
   {
     'id': 3,
     'src': "images/tour-img-1.svg",
-    'name': "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
+    'name': "Skip the Line: Crypts and Roman Catacombs Small-Group Walking Tour", 
     'numberOfReviews': "38",
     'numberOfStars': "3",
     'date': "2 PM Sunday, 12-10-2021", 
@@ -52,29 +52,30 @@ export const allTours = [
   'id': 6,
   'src': "https://i.pinimg.com/564x/ba/66/2e/ba662e64d431ea9cf507482f31fc6796.jpg",
   'name': "Fast Track - Vatican Tour with Museums, Sistine Chapel & Raphael rooms", 
-  'numberOfReviews': "",
+  'numberOfReviews': "22",
   'numberOfStars': "",
   'date': "11 AM Monday, 02-02-201", 
-  'price': "",
+  'price': "12",
   'location': "Rome, Italy"
 }, 
 {
   'id': 7,
   'src': "https://i.pinimg.com/564x/ad/30/3d/ad303d05ba23a24eaac6e8b0895d619a.jpg",
   'name': "Eiffel Tower Guided Climb Tour with Optional Summit Access",
+  'numberOfReviews': "17",
   'numberOfStars': "4",
   'date': "2 PM Wednesday, 10-09-2021", 
-  'price': "",
+  'price': "5",
   'location': "Paris, France"
 }, 
 {
   'id': 8,
   'src': "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/b1/6f/5e.jpg",
   'name': "Fast Track - Vatican Tour with Museums, Sistine Chapel & Raphael rooms", 
-  'numberOfReviews': "",
-  'numberOfStars': "",
-  'date': "", 
-  'price': "",
+  'numberOfReviews': "15",
+  'numberOfStars': "2",
+  'date': "2 PM Wednesday, 10-09-2021", 
+  'price': "7",
   'location': "Rome, Italy"
 }, 
 ]
