@@ -52,14 +52,6 @@ export const SignInInputs = styled.div`
   flex-direction: column;
   color: #9098B1;
 
-  input {
-    width: 363px;
-    height: 40px;
-    background-color: white;
-    border: 1px solid #E0E0E0;
-    border-radius: 5px;
-    margin-bottom: 30px;
-  }
   label {
       align-self: flex-start;
       padding-bottom: 5px;
@@ -96,14 +88,24 @@ export const SignInInputs = styled.div`
   }
 }
 @media screen and (max-width: 420px) {
-  input {
-    width: 80vw;
-  }
+
   hr {
     width: 80vw;
   }
   }
 `;
+export const StyledInput = styled.input`
+    width: 363px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  @media screen and (max-width: 420px) {
+    width: 80vw;
+  }
+`;
+
 export const GoogleButton = styled.button`
 display: flex;
 align-items: center;
