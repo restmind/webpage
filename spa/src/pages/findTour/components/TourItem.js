@@ -5,6 +5,7 @@ import {
   TourDescription,
   DescriptionBottom,
   Review,
+  Price,
 } from "./TourItem.styled";
 import {Location} from "../../discover/components/RecomendedTours.styled"
 
@@ -27,10 +28,10 @@ function TourItem({ src, name, numberOfReviews, numberOfStars, date, price }) {
               <img src="images\icon-location.svg" alt="location " />
               <h5>{date}</h5>
         </Location>
-        <Location>
+        <Price>
               <img src="images\icon-wallet.svg" alt="location " />
               <h3 style={{fontWeight: 500}} >From {price}â‚¬</h3>
-        </Location>
+        </Price>
         </DescriptionBottom>
       </TourDescription>
     </Wrapper>

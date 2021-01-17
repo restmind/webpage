@@ -18,7 +18,7 @@ function FilterSection() {
         <Filters></Filters>
       </FilterDesktop>
       <FilterMobile onClick={handleClick}>
-        <Location style={{ margin: "35px auto" }}>
+        <Location style={{ margin: "15px auto" }}>
             <img src="images\icon-settings.svg" alt="5 stars" />
             <h6>Filters</h6>
         </Location>

@@ -22,8 +22,8 @@ export const ListContainer = styled.div`
   border-radius: 30px;
   padding: 17px 20px 100px;
   @media screen and (max-width: 420px) {
-    width: 80vw;
-    padding: 0px 10 0px; 
+    width: 100vw;
+    padding: 15px 0px; 
   }
 `;
 
