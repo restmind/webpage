@@ -74,6 +74,7 @@ function TourList() {
                 numberOfReviews={numberOfReviews}
                 date={date}
                 price={price}
+                location={location}
               />
             )
           )}

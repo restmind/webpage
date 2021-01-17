@@ -2,6 +2,7 @@ import styled from "styled-components"
 import {colors, fontSizes} from "../../constants/StylingConstants"
 
 export const Button = styled.button`
+  margin: ${({ center }) => (center ? '20px 100px 0 100px' : '0')};
   height: 42px;
   border-radius: 5px;
   padding: 0 15px;

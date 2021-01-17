@@ -19,11 +19,12 @@ from django.urls import path
 from excursions.views import (
     ExcursionListView,
     ExcursionDetailView,
-    ExcursionCreateView
+    ExcursionCreateView,
+    ExcursionApiView
 )
 from . import views
 from myapi import views as myapiviews
-from excursions import views as excurionviews
+from rest_framework.authtoken.views import obtain_auth_token
 from users import views as usersviews
 from django.conf.urls import url, include
 from rest_framework import routers
@@ -46,5 +47,10 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('excursions/', ExcursionListView.as_view(), name='excursions-list'),
     path('excursion/<int:pk>/', ExcursionDetailView.as_view(), name='excursion-detail'),
-    path('excursion/new/', ExcursionCreateView.as_view(), name='excursion-create')
+    path('excursion/new/', ExcursionCreateView.as_view(), name='excursion-create'),
+    path('api/excursions/', ExcursionApiView.excursion_list, name='excursions-api-list'),
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.jwt')),
+    #path('api/excursion/(<int:pk>', ExcursionApiView)
 ]

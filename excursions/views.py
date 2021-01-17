@@ -5,11 +5,34 @@ from django.views.generic import (
     CreateView
 )
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from rest_framework.decorators import api_view, permission_classes
 from .models import Excursion
+from rest_framework.views import APIView
+from django.http.response import JsonResponse
+from rest_framework.permissions import IsAuthenticated
+from .serializers import ExcursionSerializer
 
 
 def superuser_or_agency(user):
     return user.is_superuser or user.groups.filter(name='agencies').exists()
+
+
+class ExcursionApiView(APIView):
+    #permission_classes = (IsAuthenticated,)
+
+    @staticmethod
+    @api_view(['GET'])
+    @permission_classes([IsAuthenticated,])
+    def excursion_list(request):
+        if request.method == 'GET':
+            excursions = Excursion.objects.all()
+
+            title = request.GET.get('title', None)
+            if title is not None:
+                excursions = excursions.filter(title__icontains=title)
+
+            excursions_serializer = ExcursionSerializer(excursions, many=True)
+            return JsonResponse(excursions_serializer.data, safe=False)
 
 
 class ExcursionListView(ListView):
@@ -26,7 +49,7 @@ class ExcursionDetailView(DetailView):
 class ExcursionCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Excursion
     fields = ['name', 'places', 'price', 'duration', 'comment']
-    success_url = '/home'
+    success_url = '/'
 
     def test_func(self):
         return superuser_or_agency(self.request.user)
